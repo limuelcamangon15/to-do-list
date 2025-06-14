@@ -1,0 +1,63 @@
+
+.inputField{
+    width: 400px;
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    height: 22px;
+    font-size: 1.1rem;
+
+    transition: all 0.3s ease;
+}
+
+.inputField:focus{
+    background-color: #000000;
+    color: white;
+}
+
+button{
+    background-color:  #4e3cc4;
+    color: white;
+    width: 100px;
+    padding: 10px;
+    border: none;
+    font-size: 1.1rem;
+    cursor: pointer;
+    border-radius: 8px;
+
+    transition: all 0.3s ease;
+}
+
+button:hover{
+    background-color: #9595b0;
+}
+
+.inputDiv{
+    margin-top: 30px;
+    margin-left: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    transition: all .5s ease;
+}
+
+.errorDiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(177, 46, 46, 0.677);
+    color: rgb(233, 233, 58);
+    border-radius: 5px;
+    gap: 20px;
+    height: 40px;
+
+    transition: all .5s ease;
+}
+
+.fields{
+    display: flex;
+    gap: 10px;
+
+    transition: all .5s ease;
+}

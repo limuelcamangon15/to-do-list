@@ -1,0 +1,17 @@
+body{
+    background: linear-gradient(190deg,rgb(0, 0, 0), rgb(8, 8, 60), rgb(0, 0, 80), rgb(2, 2, 7)) no-repeat;
+    margin: 0;
+    height: 100vh;
+}
+
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.parent{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
