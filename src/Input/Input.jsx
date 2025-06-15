@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import style from './Input.module.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faWarning, faPlus } from '@fortawesome/free-solid-svg-icons'
@@ -9,17 +9,31 @@ export default function Input({addTask, tasks}){
     const [placeholder, setPlaceholder] = useState('Add your first task here...');
 
     const errorPopup = <div className={style.errorDiv}>
-                            <FontAwesomeIcon icon={faWarning}/> 
-                            
+                            <div className={style.errorIcon}>
+                                <FontAwesomeIcon icon={faWarning}/> 
+                            </div>
+
                             <strong>Empty Input: You cannot add an empty task.</strong>
                         </div>;
 
+    useEffect(() => {
+        updatePlaceholder();
+    }, [tasks]);
+
     const updatePlaceholder = () => {
-        tasks.length < 3 ?
-            setPlaceholder(`i love you so muchhh bebecakes ko! <3`) 
-            :
-            setPlaceholder(`Wow you're so productive, I'm so proud of you!`) 
+        if(tasks.length !== 0){
+
+            tasks.length < 3 ?
+                setPlaceholder(`i love you so muchhh bebecakes ko! <3`) 
+                :
+                setPlaceholder(`Wow you're so productive, I'm so proud of you!`)
+        }
+        else{
+            setPlaceholder('Add your first task here...');
+        }
     }
+
+    
     
     function saveText(e){
         setText(e.target.value);

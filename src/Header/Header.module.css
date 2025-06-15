@@ -1,14 +1,17 @@
 .header{
+    background-color: #040624;
     color: white;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 100%;
 }
 
 .h1{
-   margin-bottom: 5px;
-   color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-bottom: 5px;
+    color: white;
 }
 
 .span{
@@ -20,4 +23,10 @@
 .a{
     text-decoration: none;
     color: wheat;
+}
+
+.strong{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: rgba(255, 255, 255, 0.77);
+    font-size: 14px;
 }

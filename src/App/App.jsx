@@ -5,25 +5,42 @@ import Input from '../Input/Input.jsx'
 import style from './App.module.css'
 
 function App() {
-  const [tasks, setTasks] = useState([]);
+  const [tasks, setTasks] = useState(() => {
+    const storedData = localStorage.getItem("tasks");
+    
+    return storedData ? JSON.parse(storedData) : [];
+  });
 
   function addTask(task){
-    setTasks([...tasks, {
+    const newTask = [...tasks, {
       taskName: task, 
       status: false
-    }]);
+    }];
+
+    setTasks(newTask);
+
+    saveToLocalStorage(newTask);
   }
 
-  function updateTask(index, newValue){
+  function updateTask(index, newValueOBJ){
     const updatedTasks = [...tasks];
 
-    updatedTasks[index] = newValue;
+    updatedTasks[index] = newValueOBJ;
     setTasks(updatedTasks);
+
+    saveToLocalStorage(updatedTasks);
   }
 
 
   function deleteTask(newArr){
-    setTasks([...newArr]);
+    const tasksWithDeleted = [...newArr];
+    setTasks(tasksWithDeleted);
+
+    saveToLocalStorage(tasksWithDeleted);
+  }
+
+  function saveToLocalStorage(taskOBJ){
+    localStorage.setItem("tasks", JSON.stringify(taskOBJ));
   }
   
   

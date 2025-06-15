@@ -81,6 +81,8 @@
 
 .taskValue{
     display: block;
+    white-space: pre-wrap;
+    word-wrap: break-word;
 }
 
 .editField{
@@ -106,12 +108,12 @@
 
 @media (max-width: 1100px){
     .items{
-        width: 100%;
+        width: 93%;
     }
 }
 
 @media (max-width: 768px){
     .items{
-        width: 100%;
+        width: 93%;
     }
 }
