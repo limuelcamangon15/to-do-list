@@ -15,8 +15,8 @@ export default function Input({addTask, tasks}){
                         </div>;
 
     const updatePlaceholder = () => {
-        tasks.length !== 3 ?
-            setPlaceholder(`Add more task to keep your productivity rythmn!`) 
+        tasks.length < 3 ?
+            setPlaceholder(`i love you so muchhh bebecakes ko! <3`) 
             :
             setPlaceholder(`Wow you're so productive, I'm so proud of you!`) 
     }
