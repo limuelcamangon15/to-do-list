@@ -14,4 +14,6 @@ If you are developing a production application, we recommend using TypeScript wi
 
 
 
-This repository is for my personal project (to do list) as part of my exploration and learning using ReactJS
+This repository is for my personal project (to do list) as part of my exploration and learning using ReactJS, I will always put a space for new knowledge and learnings and utilize all the resources that is available today, someday I will be a great programmer. I know that this is a readme file but I will take this moment to reflect and dream, I've got so far from what I started and will go further for my dream to come to life. 
+
+-June 16, 2025
